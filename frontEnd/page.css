@@ -1,7 +1,22 @@
-* {
-	border: 2px solid blue;
+body {
+    background: #99BBFF;
+    width: 80%;
+    margin: 0px auto;
+    font-family: "Comic Sans MS";
+}
+
+h1 {
+    text-align: center;
 }
 
 .main {
-    border: 3px solid black;
+    border: 1px solid white;
+    width: 80%;
+    margin: auto;
+}
+
+div {
+    background: #77CCFF;
+    margin: 0px auto;
+    align-items: center;
 }

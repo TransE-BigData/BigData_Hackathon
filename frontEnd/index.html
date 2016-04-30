@@ -4,48 +4,46 @@
     <meta charset="utf-8">
     <title>BigData_Hackthon</title>
     <link rel="stylesheet" type="text/css" href="page.css">
+    <script src="jquery.js"></script>
     <script src="page.js"></script>
 </head>
 
 <body>
     <h1>Hello, World!</h1>
     <div class="main">
-        <p>
-            使用說明：請選擇欲查詢之蔬菜及該月份，點下搜尋後，即會計算出預測值並顯示當月走勢。
-        </p>
-        <fieldset id="vegetable">
-            <legend>選擇欄位</legend>
-            請選擇蔬菜：
-            <select>
-                <option value="melon">胡瓜</option>
-                <option value="bean">菜豆</option>
-                <option value="tonhow">茼蒿</option>
-                <option value="banana">香蕉</option>
-            </select>
-            <br>
-            <br> 欲查詢範圍：
-            <input type="radio" name="range" value="month">月份
-            <input type="radio" name="range" value="year">年份
-            <br>
-            <br> 請選擇月份：
-            <select>
-                <option value="Jan">一月</option>
-                <option value="Feb">二月</option>
-                <option value="Mar">三月</option>
-                <option value="Apr">四月</option>
-                <option value="May">五月</option>
-                <option value="Jun">六月</option>
-                <option value="Jul">七月</option>
-                <option value="Aug">八月</option>
-                <option value="Sep">九月</option>
-                <option value="Oct">十月</option>
-                <option value="Nov">十一月</option>
-                <option value="Dec">十二月</option>
-            </select>
-            <br>
-            <br>
-            <input type="submit" name="submit">
-        </fieldset>
+        <div id="form">
+            <p>
+                使用說明：請選擇欲查詢之蔬菜及該月份，點下搜尋後，即會計算出預測值並顯示當月走勢。
+            </p>
+            <form id="myForm" action="aa.php" method="GET">
+                <fieldset>
+                    <legend>選擇欄位</legend>
+                    請選擇蔬菜：
+                    <select name="veg" id="vegetable">
+                        <option value="melon">胡瓜</option>
+                        <option value="bean">菜豆</option>
+                        <option value="tonhow">茼蒿</option>
+                    </select>
+                    <br>
+                    <br> 欲查詢範圍：
+                    <input type="radio" name="range" value="month" checked="checked">
+                    <label for="month">月份</label>
+                    <input type="radio" name="range" value="year">
+                    <label for="year">年份</label>
+                    <br>
+                    <br>
+                    <span id="monthOrYear">
+                    </span>
+                    <br>
+                    <br>
+                    <input type="submit" name="submit" value="查詢">
+                </fieldset>
+            </form>
+        </div>
+        <hr>
+        <div id="plot">
+            畫圖畫圖畫圖圖
+        </div>
     </div>
 </body>
 
