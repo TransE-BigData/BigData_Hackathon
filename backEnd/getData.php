@@ -1,20 +1,16 @@
 <?php
-if (isset($_POST["veg"]) && $_POST["range"]=="year") {
+//if (isset($_POST["veg"]) && $_POST["range"]=="year") {
 	getDataByMonth($_POST["veg"]);
-}
-else {
-	//echo "error";
-}
+//}
+//else {
+//	$error = "error!!!";
+//}
 
 $veg = $_POST["veg"];
 $range = $_POST["range"];
 
 function getDataByMonth($crop) {
 	switch ($crop) {
-		case '甘藍':
-			$filename = 'CabbageByMonth.json';
-			break;
-
 		case 'melon':
 			$filename = 'CucumberByMonth.json';
 			break;
@@ -41,11 +37,13 @@ function getDataByMonth($crop) {
 	for($i=0; $i<12; $i++) {
 		echo $json['avg_trade'][$i]." ";
 	}*/
+	$data = array(
+	"month" => $json['month'],
+	"avg_price" => $json['avg_price'],
+	"avg_trade" => $json['avg_trade']);
+
+	echo json_encode($data,JSON_PRETTY_PRINT);
 }
 
-$data = array(
-	"veg" => $veg,
-	"range" => $range);
 
-echo json_encode($data,JSON_PRETTY_PRINT);
 ?>

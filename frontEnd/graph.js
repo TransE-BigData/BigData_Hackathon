@@ -13,7 +13,7 @@ $(function() {
 
             success: function(msg) {
                 console.log(msg);
-                draw();
+                draw(msg.month);
             },
 
             error: function(msg) {
@@ -23,9 +23,9 @@ $(function() {
         });
     });
 
-    function draw() {
+    function draw(month) {
     var barChartData = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: month,
         datasets: [{
         type: 'bar',
               label: "Visitor",
