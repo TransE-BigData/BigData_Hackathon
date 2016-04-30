@@ -1,6 +1,6 @@
 <?php
-if (isset($_POST["crop"]) && isset($_POST["year"])) {
-	getDataByMonth($_POST["crop"]);
+if (isset($_POST["veg"]) && $_POST["range"]=="year") {
+	getDataByMonth($_POST["veg"]);
 }
 else {
 	echo "error";
@@ -12,12 +12,12 @@ function getDataByMonth($crop) {
 			$filename = 'CabbageByMonth.json';
 			break;
 
-		case '胡瓜':
+		case 'melon':
 			$filename = 'CucumberByMonth.json';
 			break;
 		
-		case '菜豆':
-			$filename = 'BeanByMonth';
+		case 'bean':
+			$filename = 'BeanByMonth.json';
 			break;
 
 		default:
