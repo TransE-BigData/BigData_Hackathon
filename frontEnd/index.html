@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <h1>Hello, World!</h1>
+    <div class="head">
+    <h1>代替太陽公公照顧你</h1>
+    </div>
     <div class="main">
         <div id="form">
             <p>
@@ -35,9 +37,9 @@
                     </select>
                     <br>
                     <br> 欲查詢範圍：
-                    <input type="radio" name="range" value="month" checked="checked" id="month_radio">
+                    <input type="radio" name="range" value="month" checked="checked" >
                     <label for="month">月份</label>
-                    <input type="radio" name="range" value="year" id="year_radio">
+                    <input type="radio" name="range" value="year" >
                     <label for="year">年份</label>
                     <br>
                     <br>
@@ -52,8 +54,10 @@
         <hr>
         <div id="plot">
             <canvas id="canvas"></canvas>
+            <canvas id="canvas2"></canvas>
         </div>
     </div>
+    <div><br><br></div>
 </body>
 
 </html>

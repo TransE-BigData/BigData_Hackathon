@@ -1,22 +1,36 @@
 body {
-    background: #99BBFF;
+    /*background: #99BBFF;*/
     width: 80%;
     margin: 0px auto;
-    font-family: "Comic Sans MS";
+    font-family: "Microsoft YaHei UI Light";
+    font-size: 17px;
+    background-color: #FAFAF5;
+}
+
+.head {
+    margin: 20px;
+    padding: 5px;
+    border-radius: 2px;
+    background-image: url("pic_flip.jpg");
+    background-size: cover;
 }
 
 h1 {
-    text-align: center;
+    text-align: 30%;
+    margin-left: 10%;
 }
 
 .main {
-    border: 1px solid white;
+    background: #fffde7;
+    border: 3px solid #AFC9C9;
+    border-radius: 10px;
     width: 80%;
     margin: auto;
+    padding: 10px;
 }
 
 div {
-    background: #77CCFF;
+    /*background: #77CCFF;*/
     margin: 0px auto;
     align-items: center;
 }
