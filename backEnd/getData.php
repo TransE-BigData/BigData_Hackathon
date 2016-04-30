@@ -1,23 +1,22 @@
 <?php
-if (isset($_POST["crop"]) && isset($_POST["year"])) {
-	getDataByMonth($_POST["crop"]);
-}
-else {
-	echo "error";
-}
+//if (isset($_POST["veg"]) && $_POST["range"]=="year") {
+	getDataByMonth($_POST["veg"]);
+//}
+//else {
+//	$error = "error!!!";
+//}
+
+$veg = $_POST["veg"];
+$range = $_POST["range"];
 
 function getDataByMonth($crop) {
 	switch ($crop) {
-		case '甘藍':
-			$filename = 'CabbageByMonth.json';
-			break;
-
-		case '胡瓜':
+		case 'melon':
 			$filename = 'CucumberByMonth.json';
 			break;
 		
-		case '菜豆':
-			$filename = 'BeanByMonth';
+		case 'bean':
+			$filename = 'BeanByMonth.json';
 			break;
 
 		default:
@@ -27,7 +26,7 @@ function getDataByMonth($crop) {
 
 	$jsondata = file_get_contents($filename);
 	$json = json_decode($jsondata, true);
-	for($i=0; $i<12; $i++) {
+	/*for($i=0; $i<12; $i++) {
 		echo $json['month'][$i]." ";
 	}
 	echo "<br>";
@@ -37,6 +36,14 @@ function getDataByMonth($crop) {
 	echo "<br>";
 	for($i=0; $i<12; $i++) {
 		echo $json['avg_trade'][$i]." ";
-	}
+	}*/
+	$data = array(
+	"month" => $json['month'],
+	"avg_price" => $json['avg_price'],
+	"avg_trade" => $json['avg_trade']);
+
+	echo json_encode($data,JSON_PRETTY_PRINT);
 }
+
+
 ?>
