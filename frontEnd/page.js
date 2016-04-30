@@ -1,12 +1,12 @@
 $(document).ready(function() {
-    var monthExists = $('input[name="range"]:checked', '#myForm').val() === 'month' ? true : false;
+    var monthExists = $('input[name="range"]:checked', '#myForm').val() === 'month' ? true : false;     //true when year was selected, month is chosen now
     var yearExists = $('input[name="range"]:checked', '#myForm').val() === 'year' ? true : false;
 
     if (!yearExists) {
         showSelect("月", "month", 1, 12);
-    } else if (yearExists) {
+    } /*else if (yearExists) {
         showSelect("年", "year", 2011, 2016);
-    }
+    }*/
 
 
     $("input:radio").on("click", function() {
@@ -24,7 +24,7 @@ $(document).ready(function() {
             yearExists = true;
             monthExists = false;
 
-            showSelect("年", "year", 2011, 2016);
+            //showSelect("年", "year", 2011, 2016);
         }
     });
 
