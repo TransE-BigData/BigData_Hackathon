@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="page.css">
     <script src="jquery.js"></script>
     <script src="page.js"></script>
+    <script src="charts2.0.js"></script>
+    <script src="graph.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,7 @@
             <p>
                 使用說明：請選擇欲查詢之蔬菜及該月份，點下搜尋後，即會計算出預測值並顯示當月走勢。
             </p>
-            <form id="myForm" action="aa.php" method="GET">
+            <form id="myForm" action="" method="POST">
                 <fieldset>
                     <legend>選擇欄位</legend>
                     請選擇蔬菜：
@@ -26,7 +28,7 @@
                     </select>
                     <br>
                     <br> 欲查詢範圍：
-                    <input type="radio" name="range" value="month" checked="checked">
+                    <input type="radio" name="range" value="month" checked="checked" id="range">
                     <label for="month">月份</label>
                     <input type="radio" name="range" value="year">
                     <label for="year">年份</label>
@@ -42,7 +44,7 @@
         </div>
         <hr>
         <div id="plot">
-            畫圖畫圖畫圖圖
+            <canvas id="canvas"></canvas>
         </div>
     </div>
 </body>

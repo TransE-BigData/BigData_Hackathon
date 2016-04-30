@@ -3,8 +3,11 @@ if (isset($_POST["veg"]) && $_POST["range"]=="year") {
 	getDataByMonth($_POST["veg"]);
 }
 else {
-	echo "error";
+	//echo "error";
 }
+
+$veg = $_POST["veg"];
+$range = $_POST["range"];
 
 function getDataByMonth($crop) {
 	switch ($crop) {
@@ -27,7 +30,7 @@ function getDataByMonth($crop) {
 
 	$jsondata = file_get_contents($filename);
 	$json = json_decode($jsondata, true);
-	for($i=0; $i<12; $i++) {
+	/*for($i=0; $i<12; $i++) {
 		echo $json['month'][$i]." ";
 	}
 	echo "<br>";
@@ -37,6 +40,12 @@ function getDataByMonth($crop) {
 	echo "<br>";
 	for($i=0; $i<12; $i++) {
 		echo $json['avg_trade'][$i]." ";
-	}
+	}*/
 }
+
+$data = array(
+	"veg" => $veg,
+	"range" => $range);
+
+echo json_encode($data,JSON_PRETTY_PRINT);
 ?>
