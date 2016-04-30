@@ -21,23 +21,23 @@
                 <fieldset>
                     <legend>選擇欄位</legend>
                     請選擇第一種蔬菜：
-                    <select name="veg" id="vegetable">
+                    <select name="veg" id="vegetable1">
                         <option value="melon">胡瓜</option>
                         <option value="bean">菜豆</option>
                         <option value="tonhow">茼蒿</option>
                     </select>
                     <br><br>
                     請選擇第二種蔬菜：
-                    <select name="veg" id="vegetable">
+                    <select name="veg" id="vegetable2">
                         <option value="melon">胡瓜</option>
                         <option value="bean">菜豆</option>
                         <option value="tonhow">茼蒿</option>
                     </select>
                     <br>
                     <br> 欲查詢範圍：
-                    <input type="radio" name="range" value="month" checked="checked" id="month_radio">
+                    <input type="radio" name="range" value="month" checked="checked">
                     <label for="month">月份</label>
-                    <input type="radio" name="range" value="year" id="year_radio">
+                    <input type="radio" name="range" value="year">
                     <label for="year">年份</label>
                     <br>
                     <br>
@@ -52,6 +52,7 @@
         <hr>
         <div id="plot">
             <canvas id="canvas"></canvas>
+            <canvas id="canvas2"></canvas>
         </div>
     </div>
 </body>
