@@ -34,15 +34,20 @@ function getDataByDate($byMonth) {
 	$jsondata = file_get_contents('BeanByDate.json');
 	$bean_json = json_decode($jsondata, true);
 
+	$jsondata = file_get_contents('Average.json');
+	$average_json = json_decode($jsondata, true);
+
 	$cucumber = $cucumber_json['Data'][$month];
 	$bean = $bean_json['Data'][$month];
+	$average = $average_json[$month];
 
 	$data = array("byMonth" => $byMonth,
 		"x_axis" => $cucumber['Date'],
 		"cucumber_price" => $cucumber['avg_price'],
 		"cucumber_trade" => $cucumber['avg_trade'],
 		"bean_price" => $bean['avg_price'],
-		"bean_trade" => $bean['avg_trade']
+		"bean_trade" => $bean['avg_trade'],
+		"average" => $average
 	);
 
 	echo json_encode($data,JSON_PRETTY_PRINT);

@@ -21,6 +21,7 @@ $(function() {
                 else {
                     draw("canvas", msg.byMonth);
                     draw("canvas2", msg);
+                    $("#avg_table").html("<table class='striped'><thead><tr><th>日期</th><th>胡瓜M</th><th>胡瓜H</th><th>胡瓜L</th><th>菜豆M</th><th>菜豆H</th><th>菜豆L</th></tr></thead><tbody><tr><td>"+msg.average['日期']+"</td><td>"+msg.average['胡瓜M']+"</td><td>"+msg.average['胡瓜H']+"</td><td>"+msg.average['胡瓜L']+"</td><td>"+msg.average['菜豆M']+"</td><td>"+msg.average['菜豆H']+"</td><td>"+msg.average['菜豆L']+"</td></tr></tbody></table><hr>");
                 }
             },
 
