@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var monthExists = $('input[name="group1"]:checked', '#myForm').val() === 'month' ? true : false;     //true when year was selected, month is chosen now
-    var yearExists = $('input[name="group1"]:checked', '#myForm').val() === 'year' ? true : false;
+    var monthExists = $('input[name="range"]:checked', '#myForm').val() === 'month' ? true : false;     //true when year was selected, month is chosen now
+    var yearExists = $('input[name="range"]:checked', '#myForm').val() === 'year' ? true : false;
 
     if (!yearExists) {
         showSelect("月", "month", 1, 12);
@@ -32,7 +32,7 @@ $(document).ready(function() {
 });
 
 function showSelect(range, engRange, start, end) {
-    var content = "<span id='" + engRange + "'>請選擇" + range + "份：<select name=" + engRange + ">";
+    var content = "<span id='" + engRange + "'>請選擇" + range + "份：<select  class='browser-default' name=" + engRange + ">";
     for (var i = start; i <= end; i++)
         content += "<option value='" + i + "'>" + i + range + "</option>";
     content += "</select></span>";
