@@ -16,9 +16,13 @@ $(function() {
             success: function(msg) {
                 console.log(msg);
                 if ($('input[name=range]:checked').val() == "year") {
+                    $("#avg_table").hide();
+                    $("#canvas2").hide();
                     draw("canvas", msg);
                 }
                 else {
+                    $("#avg_table").show();
+                    $("#canvas2").show();
                     draw("canvas", msg.byMonth);
                     draw("canvas2", msg);
                     $("#avg_table").html("<h4 style='text-align:center;'>"+msg.average['日期']+"</h4><table><thead><tr><th>蔬菜種類</th><th>平均售價</th><th>最高預期售價</th><th>最低預期售價</th></tr></thead><tbody><tr><td>胡瓜</td><td>"+msg.average['胡瓜M']+"</td><td>"+msg.average['胡瓜H']+"</td><td>"+msg.average['胡瓜L']+"</td></tr><tr><td>菜豆</td><td>"+msg.average['菜豆M']+"</td><td>"+msg.average['菜豆H']+"</td><td>"+msg.average['菜豆H']+"</td></tr></tbody></table><hr>");
