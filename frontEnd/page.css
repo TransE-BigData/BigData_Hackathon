@@ -1,7 +1,7 @@
-body {
+.body {
     /*background: #99BBFF;*/
     width: 80%;
-    margin: 0px auto;
+    margin: auto;
     font-family: "Microsoft YaHei UI Light";
     font-size: 17px;
     background-color: #FAFAF5;
