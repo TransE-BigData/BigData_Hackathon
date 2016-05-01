@@ -1,5 +1,4 @@
 $(function() {
-
     $("form").submit(function(e) {
         e.preventDefault();
 
@@ -40,10 +39,10 @@ $(function() {
                   label: "胡瓜平均量",
                     data: alldata.cucumber_trade,
                     fill: false,
-                    backgroundColor: '#71B37C',
-                    borderColor: '#71B37C',
-                    hoverBackgroundColor: '#71B37C',
-                    hoverBorderColor: '#71B37C',
+                    backgroundColor: '#7195B3',
+                    borderColor: '#7195B3',
+                    hoverBackgroundColor: '#7195B3',
+                    hoverBorderColor: '#7195B3',
                     yAxisID: 'y-axis-1'
                 }, {
                 type: 'bar',
@@ -61,12 +60,12 @@ $(function() {
                     data: alldata.cucumber_price,
                     fill: false,
                     tension:0,
-                    borderColor: '#EC932F',
-                    backgroundColor: '#EC932F',
-                    pointBorderColor: '#EC932F',
-                    pointBackgroundColor: '#EC932F',
-                    pointHoverBackgroundColor: '#EC932F',
-                    pointHoverBorderColor: '#EC932F',
+                    borderColor: '#EC382F',
+                    backgroundColor: '#EC382F',
+                    pointBorderColor: '#EC382F',
+                    pointBackgroundColor: '#EC382F',
+                    pointHoverBackgroundColor: '#EC382F',
+                    pointHoverBorderColor: '#EC382F',
                     yAxisID: 'y-axis-2'
                 }, {
                 type:'line',

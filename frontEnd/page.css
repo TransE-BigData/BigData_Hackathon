@@ -7,6 +7,12 @@ body {
     background-color: #FAFAF5;
 }
 
+div {
+    /*background: #77CCFF;*/
+    margin: 0px auto;
+    align-items: center;
+}
+
 .head {
     margin: 20px;
     padding: 5px;
@@ -29,8 +35,11 @@ h1 {
     padding: 10px;
 }
 
-div {
-    /*background: #77CCFF;*/
-    margin: 0px auto;
-    align-items: center;
+.box {
+    margin: 10px;
+    font-size: 21px;
+}
+
+#plot {
+    
 }
