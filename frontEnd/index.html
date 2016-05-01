@@ -44,10 +44,10 @@
                         <option value="tonhow">茼蒿</option>
                     </select><br> 
                     欲查詢範圍：
-                    <input type="radio" name="range" value="month" checked="checked">
+                    <input class="with-gap" id="month_radio" type="radio" name="group1" value="month" checked="checked_radio">
                     <label for="month">月份</label>
-                    <input type="radio" name="range" value="year">
-                    <label for="year">年份</label>
+                    <input class="with-gap" id="year_radio" type="radio" name="group1" value="year">
+                    <label for="year_radio">年份</label>
                     <br>
                     <br>
                     <span id="monthOrYear">
@@ -60,9 +60,9 @@
         </div></div>
         <br>
         <div class="main"id="plot">
+            <div id="avg_table"></div>
             <canvas id="canvas"></canvas>
-            <!--br><br>
-            <canvas id="canvas2"></canvas-->
+            <canvas id="canvas2"></canvas>
         </div>
     <div><br><br></div>
 
